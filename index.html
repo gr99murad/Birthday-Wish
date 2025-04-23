@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, Upoma</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: #ffebeb;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 15px #ff80a6;
+      animation: glow 2s infinite ease-in-out;
+    }
+
+    .date {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #ffe5ec;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #ffe4f1;
+    }
+
+    .music {
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      color: #ffd3dc;
+    }
+
+    button {
+      padding: 0.8rem 2rem;
+      background-color: #ff4d6d;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 77, 109, 0.5);
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #e63956;
+      transform: scale(1.05);
+    }
+
+    /* Heart Animation */
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 10px #ff80a6, 0 0 20px #ff4d6d;
+      }
+      50% {
+        text-shadow: 0 0 20px #ff4d6d, 0 0 30px #ff80a6;
+      }
+    }
+
+    audio {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      z-index: 99;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hearts">
+    <!-- Random hearts generated -->
+    <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 40%; animation-delay: 4s;"></div>
+    <div class="heart" style="left: 55%; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 70%; animation-delay: 3s;"></div>
+    <div class="heart" style="left: 85%; animation-delay: 5s;"></div>
+  </div>
+
+  <h1>Happy Birthday,Upoma My wife and My life</h1>
+  <div class="date">24.04.2002 – 24.04.2025</div>
+  <p>
+    On this special day, I want you to know how much you mean to me.<br />
+    You are my joy, my light, and my forever.<br />
+    Thank you for being by my side, for every smile and every moment we've shared.<br />
+    May your birthday be filled with all the love your heart can hold.<br />
+    I love you more with every heartbeat.
+  </p>
+  <div class="music">Soft romantic music playing...</div>
+  <button>From Your Love ❤️</button>
+
+  <!-- Background Music (autoplay and loop) -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/10/30/audio_ef5cd6c9fa.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+</body>
+</html>
